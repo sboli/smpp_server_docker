@@ -29,7 +29,7 @@ MESSAGE_STATE_CHECK_FREQUENCY=5000
 MAX_TIME_ENROUTE=10000
 
 # The minimum time to wait before generating a delivery receipt (ms)
-DELAY_DELIVERY_RECEIPTS_BY=0
+DELAY_DELIVERY_RECEIPTS_BY=3000
 
 # Percentage of messages that change state each time we check (excluding expiry or messages being completely discarded due to age)
 # Requires an integer between 0 and 100
@@ -54,7 +54,7 @@ PERCENTAGE_REJECTED=2
 # Time messages held in queue before being discarded, after a final state has been reached (milliseconds)
 # For example, after transitioning to DELIVERED (a final state), state info about this message will be
 # retained in the queue for a further (e.g.) 60000 milliseconds before being deleted.
-DISCARD_FROM_QUEUE_AFTER=5000
+DISCARD_FROM_QUEUE_AFTER=86400000
 
 # Web Management
 HTTP_PORT=8884
