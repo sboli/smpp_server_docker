@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-slim
 
-MAINTAINER komuW <komuw05@gmail.com>
+LABEL org.opencontainers.image.authors="bolispam@outlook.com"
 
 RUN apt -y autoremove && \
     apt -y clean && \
