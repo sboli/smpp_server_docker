@@ -17,6 +17,6 @@ EXPOSE 2775
 
 WORKDIR /app
 
-USER app
+USER 1001
 
 CMD ["/app/startsmppsim.sh"]
