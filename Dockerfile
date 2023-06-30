@@ -1,6 +1,7 @@
 FROM openjdk:8-jre-alpine
 
-RUN adduser -D -s /bin/sh app -h /usr/src/app -H
+RUN adduser -D -s /bin/sh app -h /usr/src/app -H \
+	&& apk add --no-cache bash
 
 COPY --chown=app:app SMPPSim /app
 
