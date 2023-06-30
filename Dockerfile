@@ -1,7 +1,11 @@
 FROM openjdk:8-jre-alpine
 
-RUN adduser -D -s /bin/sh app -h /usr/src/app -H \
+RUN addgroup -g 1001 app && \
+    adduser --shell /sbin/nologin --disabled-password \
+    --no-create-home --uid 1001 --ingroup app app \
 	&& apk add --no-cache bash
+
+USER $USER_NAME
 
 COPY --chown=app:app SMPPSim /app
 
