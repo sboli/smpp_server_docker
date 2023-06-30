@@ -5,7 +5,7 @@ RUN addgroup -g 1001 app && \
     --no-create-home --uid 1001 --ingroup app app \
 	&& apk add --no-cache bash
 
-USER $USER_NAME
+USER app
 
 COPY --chown=app:app SMPPSim /app
 
