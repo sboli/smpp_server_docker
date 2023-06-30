@@ -1,14 +1,8 @@
-FROM openjdk:8-jre-slim
+FROM openjdk:8-jre-alpine
 
-LABEL org.opencontainers.image.authors="bolispam@outlook.com"
+RUN adduser -D -s /bin/sh app -h /usr/src/app -H
 
-RUN apt -y autoremove && \
-    apt -y clean && \
-    rm -rf ~/.cache/* && \
-    rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
-    rm -rf /var/lib/apt/lists/*
-
-COPY SMPPSim /app
+COPY --chown=app:app SMPPSim /app
 
 RUN chmod +x /app/startsmppsim.sh
 
@@ -17,5 +11,7 @@ EXPOSE 8884
 EXPOSE 2775
 
 WORKDIR /app
+
+USER app
 
 CMD ["/app/startsmppsim.sh"]
