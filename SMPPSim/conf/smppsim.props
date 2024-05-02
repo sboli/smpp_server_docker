@@ -14,11 +14,11 @@ PROTOCOL_HANDLER_CLASS=com.seleniumsoftware.SMPPSim.StandardProtocolHandler
 
 # Specify the class that implements the message state life cycle simulation.
 # Such classes must extend the default class, LifeCycleManager
-#LIFE_CYCLE_MANAGER=com.seleniumsoftware.SMPPSim.LifeCycleManager
+LIFE_CYCLE_MANAGER=com.seleniumsoftware.SMPPSim.LifeCycleManager
 #
 # The Deterministic Lifecycle Manager sets message state according to the first character of the message destination address:
 # 1=EXPIRED,2=DELETED,3=UNDELIVERABLE,4=ACCEPTED,5=REJECTED, other=DELIVERED
-LIFE_CYCLE_MANAGER=com.seleniumsoftware.SMPPSim.DeterministicLifeCycleManager
+#LIFE_CYCLE_MANAGER=com.seleniumsoftware.SMPPSim.DeterministicLifeCycleManager
 
 # LifeCycleManager parameters
 #
