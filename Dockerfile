@@ -1,9 +1,9 @@
 FROM openjdk:8-jre-alpine
 
 RUN addgroup -g 1001 app && \
-    adduser --shell /sbin/nologin --disabled-password \
-    --no-create-home --uid 1001 --ingroup app app \
-	&& apk add --no-cache bash
+  adduser --shell /sbin/nologin --disabled-password \
+  --no-create-home --uid 1001 --ingroup app app \
+  && apk add --no-cache bash
 
 USER app
 
@@ -19,4 +19,4 @@ WORKDIR /app
 
 USER 1001
 
-CMD ["/app/startsmppsim.sh"]
+CMD ["/bin/bash", "-c", "/app/startsmppsim.sh"]
