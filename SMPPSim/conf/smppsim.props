@@ -29,7 +29,7 @@ MESSAGE_STATE_CHECK_FREQUENCY=1000
 MAX_TIME_ENROUTE=10000
 
 # The minimum time to wait before generating a delivery receipt (ms)
-DELAY_DELIVERY_RECEIPTS_BY=100
+DELAY_DELIVERY_RECEIPTS_BY=1000
 
 # Percentage of messages that change state each time we check (excluding expiry or messages being completely discarded due to age)
 # Requires an integer between 0 and 100
@@ -73,7 +73,7 @@ OUTBIND_ESME_SYSTEMID=smppclient1
 OUTBIND_ESME_PASSWORD=password
 
 # MO SERVICE
-DELIVERY_MESSAGES_PER_MINUTE=0
+DELIVERY_MESSAGES_PER_MINUTE=1
 DELIVER_MESSAGES_FILE=deliver_messages.csv
 
 # LOOPBACK
