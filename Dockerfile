@@ -19,4 +19,4 @@ WORKDIR /app
 
 USER 1001
 
-CMD ["/bin/bash", "-c", "/app/startsmppsim.sh"]
+CMD ["/bin/sh", "-c", "/app/startsmppsim.sh"]
